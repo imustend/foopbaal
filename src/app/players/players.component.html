@@ -5,7 +5,25 @@
         </button>
     </div>
 
-    <form class="z-50 flex flex-col bg-lime-600 p-9 rounded-xl drop-shadow-xl ease-in-out duration-200" [class.add-player-form]="!formActive" [class.add-player-form-active]="formActive">
+
+    <table class="w-1/2 text-white mr-auto ml-auto">
+        <tr class="font-semibold text-xl ">
+            <th>Number</th>
+            <th>Name</th>
+            <th>Position</th>
+        </tr>
+        <ng-template ngFor let-player [ngForOf]="playerList">
+            <tr class="font-thin even:bg-lime-500" >
+                <!-- TODO: change those things for intputs to allow for smooth editing and stuff -->
+                <th>{{player.number}}</th>
+                <th>{{player.name}}</th>
+                <th>{{player.position}}</th>
+            </tr>
+        </ng-template>
+    </table>
+
+
+    <form class="flex flex-col bg-lime-600 p-9 rounded-xl drop-shadow-xl ease-in-out duration-200" [class.add-player-form]="!formActive" [class.add-player-form-active]="formActive">
         <h2 class="text-white text-xl">Add new Player!</h2>
             <label for="name" class="text-white text-lg" >Name</label>
             <p *ngIf="newPlayerName==''" class="text-red-700 p-1">Name cannot be empty</p>

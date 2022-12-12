@@ -33,7 +33,7 @@ export class PlayersComponent {
 			return;
 		}
 
-		if(1 > this.newPlayerNumber || this.newPlayerNumber > 99) {
+		if(0 > this.newPlayerNumber || this.newPlayerNumber > 99) {
 			alert("Number has to be between 1 and 99");
 			return;
 		}
