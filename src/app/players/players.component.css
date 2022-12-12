@@ -1,0 +1,18 @@
+.add-player-form {
+    display: none;
+    opacity: 0;
+}
+
+.add-player-form-active {
+	width: 50vw;
+    transform: translate(50%, 25%);
+	opacity: 1;
+}
+
+.bg {
+    background-color: rgb(148 163 184)
+}
+
+.red-border {
+    border-color: rgb(185 28 28)
+}

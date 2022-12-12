@@ -13,9 +13,14 @@ export class PlayersComponent {
 	newPlayerNumber = 0;
 	newPlayerPosition: Position = 'Forward';
 	playerList: Player[] = [];
+	something = this.playerList.find((player) => player.number === this.newPlayerNumber);
+
+	check() {
+		this.something = this.playerList.find((player) => player.number === this.newPlayerNumber);
+	}
 
 	openForm() {
-		this.formActive = true;
+		this.formActive = !this.formActive;
 	}
 
 	closeForm() {
@@ -34,7 +39,7 @@ export class PlayersComponent {
 		}
 
 		if(this.playerList.find((player) => player.number === this.newPlayerNumber)) {
-			alert("Number already exists");
+			alert("Player with that number already exists");
 			return;
 		}
 
@@ -43,6 +48,8 @@ export class PlayersComponent {
 			number: this.newPlayerNumber,
 			position: this.newPlayerPosition
 		};
+
+		this.playerList.push(newPlayer);
 
 		this.newPlayerName = "";
 		this.newPlayerNumber = 0;
