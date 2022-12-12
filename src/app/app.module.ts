@@ -5,16 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { PlayersComponent } from './players/players.component';
+import { SquadComponent } from './squad/squad.component';
+import { OutOfBoundsComponent } from './out-of-bounds/out-of-bounds.component';
+
+import { FormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    PlayersComponent
+    PlayersComponent,
+    SquadComponent,
+    OutOfBoundsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,21 @@
 
-<div class="w-full h-2/6 flex justify-center items-center bg-lime-900">
-  <h1 class="text-6xl text-white font-bold">
-    FOOTBALL 
-  </h1>
+<div class="w-full h-2/6 bg-lime-900 flex flex-col justify-between">
+  <div class="flex justify-center items-center w-full h-1/2">
+    <h1 class="text-6xl text-white font-bold">
+      FOOTBALL 
+    </h1>
+  </div>
+
+  <div class="flex justify-center items-center w-full h-2/5 gap-9">
+    <a routerLink="../players" class="text-lg font-semibold bg-white rounded-full p-4 hover:bg-slate-400 ease-in-out duration-200">
+      Players  
+    </a>
+  
+    <a routerLink="../squad" class="text-lg font-semibold bg-white rounded-full p-4 hover:bg-slate-400 ease-in-out duration-200">
+        Squad  
+    </a>
+  </div>
+  <div class="self-end w-full h-2 bg-white"></div>
 </div>
 <div class="w-full h-4/6  bg-lime-900">
   <router-outlet></router-outlet>
