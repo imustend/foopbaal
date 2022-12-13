@@ -9,7 +9,8 @@ import { SquadComponent } from './squad/squad.component';
 import { OutOfBoundsComponent } from './out-of-bounds/out-of-bounds.component';
 
 import { FormsModule } from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {MatIconModule} from '@angular/material/icon'
     AppRoutingModule,
     FormsModule,
     MatIconModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

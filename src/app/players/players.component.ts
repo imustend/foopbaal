@@ -27,6 +27,26 @@ export class PlayersComponent {
 		this.formActive = false;
 	}
 
+	log(number: number) {
+		const p = this.playerList.find((p) => {
+			return p.number === number;
+		});
+
+		console.log(p?.name);
+	}
+
+	deletePlayer(number: number) {
+		const p = this.playerList.find((p) => {
+			return p.number === number;
+		});
+		if (p === undefined) {
+			console.error("what?");
+			return;
+		}
+		const i = this.playerList.indexOf(p);
+		this.playerList.splice(i, 1);
+	}
+
 	addPlayer() {
 		if(this.newPlayerName === "") {
 			alert("Name cannot be empty");

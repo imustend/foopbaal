@@ -11,13 +11,21 @@
             <th>Number</th>
             <th>Name</th>
             <th>Position</th>
+            <th><mat-icon class="hidden opacity-0">delete</mat-icon></th>
         </tr>
         <ng-template ngFor let-player [ngForOf]="playerList">
             <tr class="font-thin even:bg-lime-500" >
-                <!-- TODO: change those things for intputs to allow for smooth editing and stuff -->
                 <th>{{player.number}}</th>
-                <th>{{player.name}}</th>
-                <th>{{player.position}}</th>
+                <th><input type="text" value={{player.name}} [(ngModel)]="player.name" class="text-black border-black border-2"></th>
+                <th>
+                    <select name="position" id="position" class="rounded-sm border-black border-2 text-black" [(ngModel)]="player.position">
+                        <option value="Goalkeeper" [selected]="player.position === 'Goalkeeper'">Goalkeeper</option>
+                        <option value="Defender" [selected]="player.position === 'Defender'">Defender</option>
+                        <option value="Midfielder" [selected]="player.position === 'Midfielder'">Midfielder</option>
+                        <option value="Forward" [selected]="player.position === 'Forward'">Forward</option>
+                    </select>
+                </th>
+                <th class="flex items-center justify-center"><mat-icon class="ease-in-out duration-300 hover:text-red-600 hover:opacity-70 cursor-pointer" (click)="deletePlayer(player.number)">delete</mat-icon></th>
             </tr>
         </ng-template>
     </table>
