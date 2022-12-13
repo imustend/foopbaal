@@ -51,6 +51,8 @@ export class PlayersComponent {
 
 		this.playerList.push(newPlayer);
 
+		this.playerList.sort((a, b) => a.number - b.number);
+
 		this.newPlayerName = "";
 		this.newPlayerNumber = 0;
 		this.newPlayerPosition = 'Forward';
