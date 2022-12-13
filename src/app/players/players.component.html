@@ -1,6 +1,10 @@
 <div class="w-full h-full">
-    <div class="w-full h-10 bg-lime-600 flex justify-center align-middle flex-col">
-        <button (click)="openForm()" class="bg-white rounded-full p-1 hover:bg-slate-400 ease-in-out duration-200 self-end" [class.bg]="formActive">
+    <div class="w-full h-10 bg-lime-600 flex justify-end align-middle flex-row gap-6 pr-4">
+        <button (click)="update()" class="bg-white rounded-full p-1 hover:bg-slate-400 ease-in-out duration-200" [class.bg]="formActive">
+            save
+        </button>
+
+        <button (click)="openForm()" class="bg-white rounded-full p-1 hover:bg-slate-400 ease-in-out duration-200" [class.bg]="formActive">
             add
         </button>
     </div>
